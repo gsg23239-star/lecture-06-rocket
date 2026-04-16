@@ -1,0 +1,58 @@
+.card {
+    display: block;
+    width: 100%;
+    padding: 24px;
+    background-color: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    text-decoration: none;
+    transition: all 0.5s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    background-color: rgba(255, 255, 255, 0.07);
+    border-color: #3b82f6;
+}
+
+.name {
+    margin-bottom: 12px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+    transition: all 0.5s;
+}
+
+/* card 클래스가 적용된 요소에 마우스를 올리면, name의 속성이 변경 */
+.card:hover .name {
+    color: #3b82f6;
+}
+
+/* name 클래스가 적용된 요소에 마우스를 올리면, name의 속성이 변경 */
+.name:hover {}
+
+.country {
+    color: #94a3b8;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/*
+   가상 요소 선택자 before
+   요소 내부의 컨텐츠 앞에 추가적인 요소를 표시
+   -> CSS로만 만들어질 수 있는 요소를 추가할 때
+   -> 점이 찍힌다든지, 꺽쇄만 표시한다든지 할 경우
+ */
+.country::before {
+    /*
+     before나 after는 content라는 속성을 통해 내용(string)을 넣어줄 수 있음
+     */
+    content: "";
+    width: 6px;
+    height: 6px;
+    background-color: #ef4444;
+    border-radius: 50%;
+}
+
+.country::after {}
