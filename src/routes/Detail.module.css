@@ -1,0 +1,104 @@
+.loading {
+    text-align: center;
+    padding: 100px;
+    color: #94a3b8;
+}
+
+.container {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 60px 24px;
+}
+
+.backLink {
+    padding: 12px 20px;
+    margin-bottom: 32px;
+    background-color: rgba(255, 255, 255, 0.05);
+    color: #94a3b8;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 12px;
+    transition: all 0.5s;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.backLink:hover {
+    background-color: #3b82f6;
+    color: white;
+    transform: translateX(-4px);
+}
+
+.article {
+    background-color: #1e293b;
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    overflow: hidden;
+}
+
+.imageWrapper {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+}
+
+.rocketImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 부모에 딱 맞게 들어가도록 */
+    transition: all 0.5s;
+}
+
+.rocketImage:hover {
+    transform: scale(1.05);
+}
+
+.info {
+    padding: 40px;
+    color: #f1f5f9;
+}
+
+.name {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 16px;
+
+    /*
+         글자에 그라데이션을 줄 수 있는데, 그건 color 속성을 이용하지 않음
+         background에 똑같이 주고, 추가 속성을 제시함
+     */
+    background: linear-gradient(to right, #fff, #3b82f6);
+    /* 배경색을 text 영역에만 적용 */
+    -webkit-background-clip: text;
+    /* text의 색상을 transparent(투명)로 변경 */
+    -webkit-text-fill-color: transparent;
+}
+
+.description {
+    font-size: 1.2rem;
+    color: #cbd5e1;
+    line-height: 1.8;
+    margin-bottom: 32px;
+}
+
+.specs {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding-top: 24px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.specItem {
+    display: flex;
+    justify-content: space-between;
+}
+
+.label {
+    color: #64748b;
+    font-weight: 600;
+}
+
+.value {
+    color: #fff;
+}
